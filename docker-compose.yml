@@ -9,18 +9,18 @@ services:
       - $PWD/resources/certs:/etc/nginx/certs
       - $PWD/resources/secrets:/run/secrets
     env_file: $PWD/src/.env
-    container_name: example_app
+    container_name: personal-site-app
     ports:
       - 80:80
       - 443:443
   database:
-    image: mysql:5.6
+    image: mariadb:10.4
     volumes:
-      - example_database:/var/lib/mysql
+      - personal-site-db:/var/lib/mysql
     env_file: $PWD/src/.env
     ports:
       - 3306:3306
-    container_name: example_database
+    container_name: personal-site-db
 volumes:
-  example_database:
-    name: example_database
+  personal-site-db:
+    name: personal-site-db
