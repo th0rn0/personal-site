@@ -1,96 +1,156 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
+<!doctype html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
 
-        <title>Th0rn0's Site</title>
+        <title>Th0rn0.co.uk</title>
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+        <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/cover/">
 
-        <!-- Styles -->
+        <!-- Bootstrap core CSS -->
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+        <!-- Custom styles for this template -->
         <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
+            /*
+             * Globals
+             */
+
+            /* Links */
+            a,
+            a:focus,
+            a:hover {
+              color: #fff;
             }
 
-            .full-height {
-                height: 100vh;
+            /* Custom default button */
+            .btn-secondary,
+            .btn-secondary:hover,
+            .btn-secondary:focus {
+              color: #333;
+              text-shadow: none; /* Prevent inheritance from `body` */
+              background-color: #fff;
+              border: .05rem solid #fff;
             }
 
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
+
+            /*
+             * Base structure
+             */
+
+            html,
+            body {
+              height: 100%;
+              background-color: #333;
             }
 
-            .position-ref {
-                position: relative;
+            body {
+              display: -ms-flexbox;
+              display: -webkit-box;
+              display: flex;
+              -ms-flex-pack: center;
+              -webkit-box-pack: center;
+              justify-content: center;
+              color: #fff;
+              text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+              box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
             }
 
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
+            .cover-container {
+              max-width: 42em;
             }
 
-            .content {
-                text-align: center;
+
+            /*
+             * Header
+             */
+            .masthead {
+              margin-bottom: 2rem;
             }
 
-            .title {
-                font-size: 84px;
+            .masthead-brand {
+              margin-bottom: 0;
             }
 
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
+            .nav-masthead .nav-link {
+              padding: .25rem 0;
+              font-weight: 700;
+              color: rgba(255, 255, 255, .5);
+              background-color: transparent;
+              border-bottom: .25rem solid transparent;
             }
 
-            .m-b-md {
-                margin-bottom: 30px;
+            .nav-masthead .nav-link:hover,
+            .nav-masthead .nav-link:focus {
+              border-bottom-color: rgba(255, 255, 255, .25);
+            }
+
+            .nav-masthead .nav-link + .nav-link {
+              margin-left: 1rem;
+            }
+
+            .nav-masthead .active {
+              color: #fff;
+              border-bottom-color: #fff;
+            }
+
+            /*
+             * Cover
+             */
+            .cover {
+              padding: 0 1.5rem;
+            }
+            .cover .btn-lg {
+              padding: .75rem 1.25rem;
+              font-weight: 700;
+            }
+
+            /*
+             * Footer
+             */
+            .mastfoot {
+              color: rgba(255, 255, 255, .5);
             }
         </style>
     </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-                    @endauth
-                </div>
-            @endif
+    <body class="text-center">
 
-            <div class="content">
-                <div class="title m-b-md">
-                    Heyup.
+        <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+            <header class="masthead mb-auto">
+                <div class="inner">
+                    <nav class="nav nav-masthead justify-content-center">
+                        <a class="nav-link" href="#">Blog</a>
+                        <a class="nav-link" href="#">Eventula</a>
+                        <a class="nav-link" href="#">Projects</a>
+                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link" href="https://github.com/th0rn0">Github</a>
+                    </nav>
                 </div>
+            </header>
 
-                <div class="links">
-                    <a href="">Here</a>
-                    <a href="">Will</a>
-                    <a href="">Be</a>
-                    <a href="">Some</a>
-                    <a href="">Shit</a>
-                    <a href="">To</a>
-                    <a href="">Click</a>
-                    <a href="">On</a>
+            <main role="main" class="inner cover">
+                <h1 class="cover-heading">Heyup.</h1>
+                <p class="lead">{{ $tagline }}</p>
+                <p class="lead">
+                    <a href="#" class="btn btn-lg btn-secondary">About Me</a>
+                </p>
+            </main>
+
+            <footer class="mastfoot mt-auto">
+                <div class="inner">
+                    <p>Built with Vodka and Hatred.</p>
                 </div>
-            </div>
+            </footer>
         </div>
+
+
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
     </body>
 </html>

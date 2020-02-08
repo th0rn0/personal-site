@@ -12,7 +12,16 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+	$tagline = [
+        "Tha's come too far..",
+        "Blood and Stomach Pills",
+        "Have you ever tried Proper Gravy",
+        "Put big light on",
+        "Eeee it's like Blackpool Luminations in 'ere",
+        "Can you tell I'm from Yorkshire",
+        "2s on that DevOps Pal",
+	];
+    return view('welcome')->withTagline($tagline[array_rand($tagline)]);
 });
 
 Auth::routes();
