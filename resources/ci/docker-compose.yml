@@ -1,0 +1,37 @@
+version: '2'
+services:
+  app:
+    image: th0rn0/personal-site:latest@sha256:ee32c3825f1b3363b3297e42e47459a62a380b360c61a3e82b1958f0cbf23eb3
+    environment:
+      APP_DEBUG: 'false'
+      APP_ENV: production
+      APP_URL: th0rn0.co.uk
+      APP_KEY: ${APP_KEY}
+      DB_CONNECTION: mysql
+      DB_DATABASE: personal_site
+      DB_HOST: database
+      DB_MIGRATE: 'true'
+      DB_PASSWORD: ${DB_PASSWORD}
+      DB_PORT: '3306'
+      DB_USERNAME: ${DB_USERNAME}
+      ENABLE_HTTPS: 'false'
+    volumes:
+    - lan_manager_storage:/web/html/storage/
+    ports:
+    - 80:80/tcp
+    - 443:443/tcp
+    labels:
+      io.rancher.container.pull_image: always
+    links:
+      - database:database
+  database:
+    image: linuxserver/mariadb:110.4.12mariabionic-ls52
+    environment:
+      MYSQL_DATABASE: personal_site
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+      MYSQL_RANDOM_ROOT_PASSWORD: 'true'
+      MYSQL_USER: ${DB_USERNAME}
+    volumes:
+    - perosnal_site_storage:/var/lib/mysql
+    ports:
+    - 3306:3306/tcp

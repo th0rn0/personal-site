@@ -13,13 +13,12 @@
 
 Route::get('/', function () {
 	$tagline = [
-        "Tha's come too far..",
         "Blood and Stomach Pills",
-        "Have you ever tried Proper Gravy",
-        "Put big light on",
         "Eeee it's like Blackpool Luminations in 'ere",
-        "Can you tell I'm from Yorkshire",
         "2s on that DevOps Pal",
+        "Airsoft Dude, Devops Bro.",
+        "Railgun God.",
+        "Space Dude."
 	];
     return view('welcome')->withTagline($tagline[array_rand($tagline)]);
 });

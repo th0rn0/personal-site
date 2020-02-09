@@ -129,6 +129,7 @@
                         <a class="nav-link" href="#">Projects</a>
                         <a class="nav-link" href="#">Contact</a>
                         <a class="nav-link" href="https://github.com/th0rn0">Github</a>
+                        <a class="nav-link" href="https://twitter.com/th0rn0">Twitter</a>
                     </nav>
                 </div>
             </header>
