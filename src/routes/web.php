@@ -13,12 +13,10 @@
 
 Route::get('/', function () {
 	$tagline = [
-        "Blood and Stomach Pills",
-        "Eeee it's like Blackpool Luminations in 'ere",
-        "2s on that DevOps Pal",
-        "Airsoft Dude, Devops Bro.",
+        "Airsoft Dude.",
+        "Devops Bro.",
         "Railgun God.",
-        "Space Dude."
+        "Space Cmdr."
 	];
     return view('welcome')->withTagline($tagline[array_rand($tagline)]);
 });
@@ -26,3 +24,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/projects', 'ProjectsController@index')->name('projects');
+Route::get('/projects/eventula', 'ProjectsController@eventula')->name('projects.eventula');
+Route::get('/projects/site', 'ProjectsController@site')->name('projects.site');
+Route::get('/projects/lanops', 'ProjectsController@lanops')->name('projects.lanops');

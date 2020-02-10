@@ -66,6 +66,10 @@ gulp:
 	-w /usr/src/app \
 	node:8 /bin/bash -ci "node_modules/.bin/gulp"
 
+# Compile Docker Images
+compile:
+	docker buildx build --platform linux/amd64,linux/arm/v7 --push -t th0rn0/personal-site:latest .
+
 # Wait for containers to initialize
 wait:
 	sleep 30
