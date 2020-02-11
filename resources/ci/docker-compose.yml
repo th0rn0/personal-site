@@ -35,3 +35,29 @@ services:
     - perosnal_site_storage:/var/lib/mysql
     ports:
     - 3306:3306/tcp
+  loadbalancer:
+    image: traefik:v2.0
+    volumes:
+    - /var/run/docker.sock:/var/run/docker.sock:ro
+    - /certs:/certs:z
+    - /acme:/acme:z
+    ports:
+    - 80:80/tcp
+    - 443:443/tcp
+    - 8080:8080/tcp
+    command:
+    - --api.insecure=true
+    - --providers.rancher=true
+    - --entryPoints.web.address=:80
+    - --entryPoints.websecure.address=:443
+    - --providers.rancher.exposedByDefault=false
+    - --certificatesresolvers.le.acme.email=th0rn0@lanops.co.uk
+    - --certificatesresolvers.le.acme.storage=/acme/acme.json
+    - --certificatesresolvers.le.acme.tlschallenge=true
+    labels:
+      io.rancher.container.agent.role: environmentAdmin,agent
+      io.rancher.container.agent_service.drain_provider: 'true'
+      io.rancher.scheduler.affinity:host_label: loadbalancer=true
+      io.rancher.container.create_agent: 'true'
+      io.rancher.container.pull_image: always
+      io.rancher.scheduler.global: 'true'
