@@ -21,5 +21,15 @@ then
 	fi
 fi
 
+# Clear the config cache and load in new Variables
+php artisan config:clear
+php artisan config:cache
+
+# Set up Symlink
+if [ -L "$NGINX_DOCUMENT_ROOT/public/storage" ]; then
+	rm $NGINX_DOCUMENT_ROOT/public/storage
+fi
+php artisan storage:link
+
 # Supervisor Default
 /usr/bin/supervisord -c /etc/supervisor/conf.d/supervisord.conf

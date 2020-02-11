@@ -123,11 +123,11 @@
             <header class="masthead mb-auto">
                 <div class="inner">
                     <nav class="nav nav-masthead justify-content-center">
-                        <a class="nav-link" href="#">Blog</a>
+                        <a class="nav-link disabled" href="#">Blog</a>
                         <a class="nav-link" href="{{ route('projects.eventula') }}">Eventula</a>
-                        <a class="nav-link" href="https://lanops.co.uk">LanOps</a>
-                        <a class="nav-link" href="#">Projects</a>
-                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link" href="{{ route('projects.lanops') }}">LanOps</a>
+                        <a class="nav-link" href="{{ route('projects') }}">Projects</a>
+                        <a class="nav-link disabled" href="#">Contact</a>
                         <a class="nav-link" href="https://github.com/th0rn0">Github</a>
                         <a class="nav-link" href="https://twitter.com/th0rn0">Twitter</a>
                     </nav>
@@ -138,7 +138,7 @@
                 <h1 class="cover-heading">Heyup.</h1>
                 <p class="lead">{{ $tagline }}</p>
                 <p class="lead">
-                    <a href="#" class="btn btn-lg btn-secondary">About Me</a>
+                    <a href="#" class="btn btn-lg btn-secondary disabled">About Me</a>
                 </p>
             </main>
 

@@ -31,7 +31,7 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Blog</a>
+                        <a class="nav-link disabled" href="#">Blog</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('projects.eventula') }}">Eventula</a>
