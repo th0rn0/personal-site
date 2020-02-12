@@ -123,7 +123,7 @@
             <header class="masthead mb-auto">
                 <div class="inner">
                     <nav class="nav nav-masthead justify-content-center">
-                        <a class="nav-link disabled" href="#">Blog</a>
+                        <a class="nav-link" href="{{ route('blog.index') }}">Blog</a>
                         <a class="nav-link" href="{{ route('projects.eventula') }}">Eventula</a>
                         <a class="nav-link" href="{{ route('projects.lanops') }}">LanOps</a>
                         <a class="nav-link" href="{{ route('projects') }}">Projects</a>
