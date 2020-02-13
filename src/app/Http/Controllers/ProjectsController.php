@@ -2,6 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use Canvas\Tag;
+use Canvas\Post;
+use Canvas\Topic;
+use Canvas\UserMeta;
+use Illuminate\View\View;
+use Illuminate\Support\Str;
+use Canvas\Events\PostViewed;
 use Illuminate\Http\Request;
 
 class ProjectsController extends Controller
@@ -33,7 +40,8 @@ class ProjectsController extends Controller
      */
     public function eventula()
     {
-        return view('projects.eventula.index');
+        $data = $this->getPosts('Eventula');
+        return view('projects.eventula.index', compact('data'));
     }
 
     /**
@@ -43,7 +51,8 @@ class ProjectsController extends Controller
      */
     public function lanops()
     {
-        return view('projects.lanops.index');
+        $data = $this->getPosts('LanOps');
+        return view('projects.lanops.index', compact('data'));
     }
 
     /**
@@ -54,5 +63,25 @@ class ProjectsController extends Controller
     public function site()
     {
         return view('projects.site.index');
+    }
+
+    private function getPosts($slug)
+    {
+        $data = array();
+        if (Topic::where('slug', $slug)->first()) {
+            $metaData = UserMeta::forCurrentUser()->first();
+            $emailHash = md5(trim(Str::lower(optional(request()->user())->email)));
+
+            $data = [
+                'avatar' => optional($metaData)->avatar && !empty(optional($metaData)->avatar) ? $metaData->avatar : "https://secure.gravatar.com/avatar/{$emailHash}?s=500",
+                'tags'   => Tag::all(['name', 'slug']),
+                'topics' => Topic::all(['name', 'slug']),
+                'topic'  => Topic::with('posts')->where('slug', $slug)->first(),
+                'posts'  => Post::whereHas('topic', function ($query) use ($slug) {
+                    $query->where('slug', $slug);
+                })->published()->orderByDesc('published_at')->simplePaginate(10),
+            ];
+        }
+        return $data;
     }
 }
