@@ -41,10 +41,10 @@
 @section('content')
     <div class="container">
         <div class="row">
-            <div class="col col-lg-8">
+            <div class="col col-lg-12">
                 <h1 class="text-dark font-serif pt-5 mb-4 @unless($data['post']->summary) mb-4 @endif">{{ $data['post']->title }}</h1>
                 <div class="media py-1">
-                    <img src="{{ sprintf('%s%s%s', 'https://secure.gravatar.com/avatar/', md5(strtolower(trim($data['author']->email))), '?s=200') }}"
+                    <img src="{{ $data['avatar'] }}"
                          class="mr-3 rounded-circle shadow-sm"
                          style="width: 50px"
                          alt="{{ $data['author']->name }}">
