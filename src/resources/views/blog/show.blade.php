@@ -44,12 +44,12 @@
             <div class="col col-lg-12">
                 <h1 class="text-dark font-serif pt-5 mb-4 @unless($data['post']->summary) mb-4 @endif">{{ $data['post']->title }}</h1>
                 <div class="media py-1">
-                    <img src="{{ $data['avatar'] }}"
+                    <img src="/images/avatar.jpg"
                          class="mr-3 rounded-circle shadow-sm"
                          style="width: 50px"
                          alt="{{ $data['author']->name }}">
                     <div class="media-body">
-                        <p class="mt-0 mb-1 font-weight-bold">{{ $data['author']->name }}</p>
+                        <p class="mt-0 mb-1 font-weight-bold">{{ ucfirst($data['author']->name) }}</p>
                         <span class="text-muted">{{ \Carbon\Carbon::parse($data['post']->published_at)->formatLocalized('%b %d') }} — {{ $data['post']->read_time }}</span>
                     </div>
                 </div>
