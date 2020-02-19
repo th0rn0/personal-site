@@ -38,6 +38,8 @@ Route::group(['middleware' => ['noregistration']], function () {
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('/stream', 'HomeController@stream')->name('stream');
+
 Route::get('/projects', 'ProjectsController@index')->name('projects');
 Route::get('/projects/eventula', 'ProjectsController@eventula')->name('projects.eventula');
 Route::get('/projects/site', 'ProjectsController@site')->name('projects.site');
