@@ -51,11 +51,11 @@
           	<div class="card mb-4 box-shadow">
             	<img class="card-img-top" src="/images/smrikyisms.jpg" alt="Card image cap">
                 <div class="card-body">
-        			<h5 class="card-title">Smirkyisms - Coming soon</h5>
+        			<h5 class="card-title">Smirkyisms</h5>
                   	<p class="card-text">A upcoming Quote Book & Memory Bank for Friends.</p>
                   	<div class="d-flex justify-content-between align-items-center">
                     	<div class="btn-group">
-                      		<button type="button" class="btn btn-sm btn-outline-secondary disabled">View</button>
+                      		<a href="{{ route('projects.smirkyisms') }}"><button type="button" class="btn btn-sm btn-outline-secondary">View</button></a>
                     	</div>
                   	</div>
                 </div>

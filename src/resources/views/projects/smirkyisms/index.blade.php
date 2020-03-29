@@ -1,22 +1,22 @@
 @extends('layouts.app')
 
-@section ('title',  'Personal Site')
+@section ('title',  'Smirkyisms')
 
 @section('content')
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img class="first-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Smirkyisms">
-          <div class="container">
-              <div class="carousel-caption text-left">
-                <h1>Personal Site.</h1>
+      	<div class="carousel-item active">
+        	<img class="first-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Smirkyisms">
+        	<div class="container">
+          		<div class="carousel-caption text-left">
+            		<h1>Smirkyisms.</h1>
                 <p>
-                    This very site you are on now! Built on Laravel and dockerized to run on a Raspberry Pi.
+                    Smirkyisms as a App I built to try and learn NodeJS, VueJS and Backend / Frontend Services. It allows users to post quotes to a MongoDB using a VueJS Frontend or a Discord Bot.
                 </p>
-                <p><a class="btn btn-lg btn-primary" href="https://github.com/th0rn0/personal-site" role="button">Check it out!</a></p>
-              </div>
-        </div>
-        </div>
+                <p><a class="btn btn-lg btn-primary" href="https://smirkyisms.com" role="button">Check it out!</a></p>
+          		</div>
+    		</div>
+      	</div>
     </div>
 </div>
 
@@ -24,11 +24,11 @@
 <div class="container marketing">
     <div class="row featurette">
         <div class="col-md-7">
-            <h2 class="featurette-heading">Laravel. <span class="text-muted">Built using Laravel.</span></h2>
-            <p class="lead">Good Old Laravel! The core is built upon Laravel V6 and PHP using NGINX as the HTTP Server. EZ-Mode.</p>
+            <h2 class="featurette-heading">Frontend. <span class="text-muted">Built using VueJS.</span></h2>
+            <p class="lead">Pure frontend framework running behind a NGINX Loadbalancer.</p>
         </div>
         <div class="col-md-5">
-            <img width="70%" class="featurette-image rounded img-fluid mx-auto" src="/images/laravel-logo.png" alt="Laravel">
+            <img width="70%" class="featurette-image rounded img-fluid mx-auto" src="/images/vue-logo.png" alt="Frontend">
         </div>
     </div>
 
@@ -36,11 +36,11 @@
 
     <div class="row featurette">
         <div class="col-md-7 order-md-2">
-            <h2 class="featurette-heading" style="margin-top: 5rem">Dockerized. <span class="text-muted">Like anything good.</span></h2>
-            <p class="lead">Utilizing Docker buildx this App is developed on a x64 system and deployed onto a ArmV7 Raspberry Pi. Complete parity between Development and Production.</p>
+            <h2 class="featurette-heading" style="margin-top: 5rem">Bot. <span class="text-muted">Built using ExpressJS.</span></h2>
+            <p class="lead">Built upon Express & DiscordJS. Added to my discord servers, it allows the users to provoke the bot and have it quote messages directly from discord to the server.</p>
         </div>
         <div class="col-md-5 order-md-1">
-            <img width="70%" class="featurette-image rounded img-fluid mx-auto" src="/images/docker.png" alt="Docker">
+            <img width="70%" class="featurette-image rounded img-fluid mx-auto" src="/images/discord-logo.png" alt="ExpressJS">
         </div>
     </div>
 
@@ -48,11 +48,11 @@
 
     <div class="row featurette">
         <div class="col-md-7">
-            <h2 class="featurette-heading">Raspberry Pi. <span class="text-muted">Low Power. High Tech.</span></h2>
-            <p class="lead">Running on a Raspberry Pi 3. Nice and low powered and thanks to Docker Buildx the docker images are built for ARM Architecture.</p>
+            <h2 class="featurette-heading">Backend. <span class="text-muted">Built using SailsJS.</span></h2>
+            <p class="lead">JS Framework for rapid development. Used for just the API, the bot and the client bot communicate with the API Server over HTTP.</p>
         </div>
         <div class="col-md-5">
-         <img class="featurette-image rounded img-fluid mx-auto" src="/images/raspberry-logo.png" alt="SailsJS">
+         <img width="70%" class="featurette-image rounded img-fluid mx-auto" src="/images/sails-logo.png" alt="SailsJS">
         </div>
     </div>
 

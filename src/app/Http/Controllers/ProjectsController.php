@@ -56,13 +56,25 @@ class ProjectsController extends Controller
     }
 
     /**
+     * Show Smirkyisms.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function smirkyisms()
+    {
+        $data = $this->getPosts('Smirkyisms');
+        return view('projects.smirkyisms.index', compact('data'));
+    }
+
+    /**
      * Show Site.
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
     public function site()
     {
-        return view('projects.site.index');
+        $data = $this->getPosts('PersonalSite');
+        return view('projects.site.index', compact('data'));
     }
 
     private function getPosts($slug)

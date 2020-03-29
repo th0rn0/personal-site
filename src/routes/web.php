@@ -44,6 +44,7 @@ Route::get('/projects', 'ProjectsController@index')->name('projects');
 Route::get('/projects/eventula', 'ProjectsController@eventula')->name('projects.eventula');
 Route::get('/projects/site', 'ProjectsController@site')->name('projects.site');
 Route::get('/projects/lanops', 'ProjectsController@lanops')->name('projects.lanops');
+Route::get('/projects/smirkyisms', 'ProjectsController@smirkyisms')->name('projects.smirkyisms');
 
 
 // Get all published posts

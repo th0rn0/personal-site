@@ -74,7 +74,7 @@
 <div class="container">
     <h2>Related Posts</h2>
     <hr>
-    @if($data['posts']->count() > 0)
+    @if(isset($data['data']) && $data['posts']->count() > 0)
         @foreach($data['posts'] as $post)
             @if($loop->first)
                 <div class="jumbotron p-4 p-md-5 text-white rounded @if(empty($post->featured_image)) bg-dark @endif"
@@ -94,7 +94,7 @@
             @endif
         @endforeach
     @endif
-    @if($data['posts']->count() > 0)
+    @if(isset($data['data']) && $data['posts']->count() > 0)
         @foreach($data['posts'] as $post)
             @if(!$loop->first)
                 <div class="mb-5">
