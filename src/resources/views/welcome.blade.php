@@ -127,7 +127,7 @@
                         <a class="nav-link" href="{{ route('projects.eventula') }}">Eventula</a>
                         <a class="nav-link" href="{{ route('projects.lanops') }}">LanOps</a>
                         <a class="nav-link" href="{{ route('projects') }}">Projects</a>
-                        <a class="nav-link disabled" href="#">Contact</a>
+                        <a class="nav-link" href="{{ route('contact') }}">Contact</a>
                         <a class="nav-link" href="https://github.com/th0rn0">Github</a>
                         <a class="nav-link" href="https://twitter.com/th0rn0">Twitter</a>
                     </nav>

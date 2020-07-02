@@ -43,7 +43,7 @@
                         <a class="nav-link" href="{{ route('projects') }}">Projects</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled" href="#">Contact</a>
+                        <a class="nav-link" href="{{ route('contact') }}">Contact</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="https://github.com/th0rn0">Github</a>

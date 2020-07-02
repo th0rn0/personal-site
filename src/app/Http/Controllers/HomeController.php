@@ -30,4 +30,9 @@ class HomeController extends Controller
     {
         return view('stream');
     }
+
+    public function contact()
+    {
+        return view('contact');
+    }
 }
