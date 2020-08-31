@@ -46,7 +46,7 @@
             html,
             body {
                 height: 100%;
-                background-color: #333;
+                background-image: url("/images/background.jpg");
             }
 
             body {
@@ -135,10 +135,10 @@
             </header>
 
             <main role="main" class="inner cover">
-                <h1 class="cover-heading">Heyup.</h1>
+                <h1 class="cover-heading">Hey Up.</h1>
                 <p class="lead">{{ $tagline }}</p>
                 <p class="lead">
-                    <a href="#" class="btn btn-lg btn-secondary disabled">About Me</a>
+                    <a href="{{ route('about') }}" class="btn btn-lg btn-secondary">About Me</a>
                 </p>
             </main>
 

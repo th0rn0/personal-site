@@ -26,13 +26,9 @@ class HomeController extends Controller
         return view('home');
     }
 
-    public function stream()
+    public function about()
     {
-        return view('stream');
+        return view('about');
     }
 
-    public function contact()
-    {
-        return view('contact');
-    }
 }

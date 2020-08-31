@@ -15,8 +15,7 @@ Route::get('/', function () {
 	$tagline = [
         "Airsoft Dude.",
         "Devops Bro.",
-        "Railgun God.",
-        "Space Cmdr."
+        "Railgun God."
 	];
     return view('welcome')->withTagline($tagline[array_rand($tagline)]);
 });
@@ -38,9 +37,9 @@ Route::group(['middleware' => ['noregistration']], function () {
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/contact', 'HomeController@contact')->name('contact');
+Route::get('/about', 'HomeController@about')->name('about');
 
-Route::get('/stream', 'HomeController@stream')->name('stream');
+Route::get('/contact', 'HomeController@about')->name('contact');
 
 Route::get('/projects', 'ProjectsController@index')->name('projects');
 Route::get('/projects/eventula', 'ProjectsController@eventula')->name('projects.eventula');
