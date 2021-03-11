@@ -11,7 +11,7 @@
           		<div class="carousel-caption text-left">
             		<h1>Smirkyisms.</h1>
                 <p>
-                    Smirkyisms as a App I built to try and learn NodeJS, VueJS and Backend / Frontend Services. It allows users to post quotes to a MongoDB using a VueJS Frontend or a Discord Bot.
+                    Smirkyisms as a App I built to try and learn NodeJS, VueJS and Backend / Frontend Services. It allows users to post quotes to a MongoDB using a VueJS Frontend or a Discord Bot. It was eventually rewritten with a PHP Backend.
                 </p>
                 <p><a class="btn btn-lg btn-primary" href="https://smirkyisms.com" role="button">Check it out!</a></p>
           		</div>
@@ -24,11 +24,11 @@
 <div class="container marketing">
     <div class="row featurette">
         <div class="col-md-7">
-            <h2 class="featurette-heading">Frontend. <span class="text-muted">Built using VueJS.</span></h2>
-            <p class="lead">Pure frontend framework running behind a NGINX Loadbalancer.</p>
+            <h2 class="featurette-heading">Frontend. <span class="text-muted">Built using Livewire & Tailwind.</span></h2>
+            <p class="lead">Incredibly powerful, cutting edge and secure.</p>
         </div>
         <div class="col-md-5">
-            <img width="70%" class="featurette-image rounded img-fluid mx-auto" src="/images/vue-logo.png" alt="Frontend">
+            <img width="70%" class="featurette-image rounded img-fluid mx-auto" src="/images/livewire-logo.png" alt="Frontend">
         </div>
     </div>
 
@@ -48,11 +48,11 @@
 
     <div class="row featurette">
         <div class="col-md-7">
-            <h2 class="featurette-heading">Backend. <span class="text-muted">Built using SailsJS.</span></h2>
-            <p class="lead">JS Framework for rapid development. Used for just the API, the bot and the client bot communicate with the API Server over HTTP.</p>
+            <h2 class="featurette-heading">Backend. <span class="text-muted">Laravel 8.</span></h2>
+            <p class="lead">PHP Framework for rapid development. Used for just the API, the bot and the client bot communicate with the API Server over HTTP.</p>
         </div>
         <div class="col-md-5">
-         <img width="70%" class="featurette-image rounded img-fluid mx-auto" src="/images/sails-logo.png" alt="SailsJS">
+         <img width="70%" class="featurette-image rounded img-fluid mx-auto" src="/images/laravel-logo.png" alt="SailsJS">
         </div>
     </div>
 
