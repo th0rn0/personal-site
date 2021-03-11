@@ -1,5 +1,5 @@
 FROM th0rn0/php-nginx-base:latest
-MAINTAINER Thornton Phillis (Th0rn0@lanops.co.uk)
+MAINTAINER Thornton Phillis (dev@th0rn0.co.uk)
 
 # ENV - App Defaults
 
